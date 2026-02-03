@@ -14,7 +14,7 @@ public class VacationServiceTest {
     public void testVacationMonthsAtIncome10_000(int expected, int income, int expense, int threshold) {
         VacationService service = new VacationService();
 
-        int actual = service.calcMonths(10_000, 3_000, 20_000);
+        int actual = service.calcMonths(income, expense, threshold);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -24,7 +24,7 @@ public class VacationServiceTest {
     })
     public void testVacationMonthsAtIncome100_000(int expected, int income, int expense, int threshold) {
         VacationService service = new VacationService();
-        int actual = service.calcMonths(100_000, 6_000, 150_000);
+        int actual = service.calcMonths(income, expense, threshold);
         Assertions.assertEquals(expected, actual);
     }
 
