@@ -27,7 +27,4 @@ public class VacationServiceTest {
         int actual = service.calcMonths(income, expense, threshold);
         Assertions.assertEquals(expected, actual);
     }
-
-
 }
-

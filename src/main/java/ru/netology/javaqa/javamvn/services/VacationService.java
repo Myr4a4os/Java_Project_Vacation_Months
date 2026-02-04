@@ -8,15 +8,13 @@ public class VacationService {
 
         for (int month = 0; month < 12; month++) {
             if (balance >= threshold)  // отдых
-        {
-            balance = (balance - expense) / 3;
-            vacationMonths++;
+            {
+                balance = (balance - expense) / 3;
+                vacationMonths++;
+            } else {
+                balance = balance + income - expense;
+            }
         }
-        else
-        {
-            balance = balance + income - expense;
-        }
+        return vacationMonths;
     }
-     return vacationMonths;
-}
 }
